@@ -4,23 +4,22 @@
 # include <iostream>
 # include "Contact.hpp"
 
-class PhoneBook
-{
+# define GREEN "\033[1;32m"
+# define RED "\033[1;31m"
+# define NONE "\033[0m"
+
+class PhoneBook {
     private:
-        int     page;
-        Contact contact;
+        static const int    numPages = 8;
+        int                 contactId;
+        Contact             contact[numPages];
     public:
-        PhoneBook(/* args */);
-        ~PhoneBook();
+        PhoneBook(void);
+        ~PhoneBook(void);
+    public:
+        void    add_contact(void);
+        void    search_contact(void);
 };
-
-PhoneBook::PhoneBook(/* args */)
-{
-}
-
-PhoneBook::~PhoneBook()
-{
-}
 
 
 #endif
