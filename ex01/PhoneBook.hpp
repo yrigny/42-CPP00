@@ -1,7 +1,8 @@
+
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include <iostream>
+# include <iomanip>
 # include "Contact.hpp"
 
 # define GREEN "\033[1;32m"
@@ -19,7 +20,8 @@ class PhoneBook {
     public:
         void    add_contact(void);
         void    search_contact(void);
+        void    print_all_contacts(int lastPage);
+        void    print_field_abbr(int index, int fieldName);
 };
-
 
 #endif
