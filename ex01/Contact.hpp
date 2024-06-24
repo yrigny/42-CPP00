@@ -3,7 +3,6 @@
 # define CONTACT_HPP
 
 # include <iostream>
-# include <string>
 
 # define GREEN "\033[1;32m"
 # define RED "\033[1;31m"
@@ -14,28 +13,30 @@
 # define PHONENUMBER 4
 # define DARKESTSECRET 5
 
-class Contact
-{
+class Contact {
+
     private:
+
         std::string firstName;
         std::string lastName;
         std::string nickname;
         std::string phoneNumber;
         std::string darkestSecret;
 
+        bool        valid_input(std::string str);
+
     public:
+
         Contact(void);
         ~Contact(void);
 
-    public:
-        bool        valid_input(std::string str);
         void        set_first_name(void);
         void        set_last_name(void);
         void        set_nickname(void);
         void        set_phone_number(void);
         void        set_darkest_secret(void);
-        std::string get_field_content(int fieldName);
-        void        print_contact(void);
+        std::string get_field_content(int fieldName) const;
+        void        print_contact(void) const;
 };
 
 #endif

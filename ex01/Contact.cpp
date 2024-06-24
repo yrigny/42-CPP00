@@ -77,7 +77,7 @@ void    Contact::set_darkest_secret(void) {
     }
 }
 
-std::string Contact::get_field_content(int fieldName) {
+std::string Contact::get_field_content(int fieldName) const {
     if (fieldName == FIRSTNAME)
         return this->firstName;
     if (fieldName == LASTNAME)
@@ -89,7 +89,7 @@ std::string Contact::get_field_content(int fieldName) {
     return this ->darkestSecret;
 }
 
-void    Contact::print_contact(void) {
+void    Contact::print_contact(void) const {
     std::cout << "First name    : " << this->get_field_content(FIRSTNAME) << std::endl;
     std::cout << "Last name     : " << this->get_field_content(LASTNAME) << std::endl;
     std::cout << "Nickname      : " << this->get_field_content(NICKNAME) << std::endl;
