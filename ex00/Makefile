@@ -25,7 +25,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-$(OBJ): %.o: %.cpp %.hpp
+$(OBJ): %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
